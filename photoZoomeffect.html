@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .main {
+            min-height:50vh;
+            overflow-x: hidden;
+            position: relative;
+            background-color: rgb(202, 202, 202);
+        }
+        .main::-webkit-scrollbar{
+            display: none;
+        }
+
+        .main .box-1 {
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            border-bottom: 2px solid black;
+        }
+
+        .main .box-1 .div {
+            width: 30%;
+            height: 300px;
+        }
+
+        .main .box-1 .div .img-div {
+            background-color: red;
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 3px;
+        }
+
+        .main .box-1 .div .img-div img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: all ease 0.5s;
+        }
+
+        .main .box-1 .div .img-div:hover img {
+            scale: 1.1;
+        }
+
+        .main .box-1 .div-2 {
+            text-align: center;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+        }
+    </style>
+    <style>
+        .box-2 {
+            width: 100%;
+            /* height: 300px; */
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 10px;
+            border-bottom: 1px solid black;
+        }
+
+        .box-2 .left {
+            width: 50%;
+            border-right: 1px solid black;
+            text-align: center;
+        }
+
+        .box-2 .right {
+            width: 50%;
+            padding: 10px 20px;
+        }
+
+        .box-2 .right .anda {
+            background-color: white;
+            width: 100%;
+            height: 130px;
+            border-radius: 50%;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px solid black;
+        }
+
+        .box-2 .right .anda img {
+            width: 200px;
+            height: 60px;
+            display: inline-block;
+            text-align: center;
+            transform: translateX(+95%);
+            transition: all ease 0.6s;
+        }
+
+        .box-2 .right .anda h1 {
+            font-size: 40px;
+            display: inline-block;
+            transform: translateX(+100%);
+            transition: all ease 0.6s;
+        }
+
+        .box-2 .right .anda:hover img {
+            transform: translateX(-100%);
+        }
+
+        .box-2 .right .anda:hover h1 {
+            transform: translateX(-24%);
+        }
+    </style>
+    <style>
+        .adv {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-y: hidden;
+            overflow-x: scroll;
+            border: 1px solid black;
+        }
+
+        .adv::-webkit-scrollbar {
+            display: none;
+        }
+
+        .adv h1 {
+            font-weight: 100;
+            display: inline-block;
+            white-space: nowrap;
+            margin-right: 40px;
+            font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+            animation: advAnivation 5s infinite linear;
+        }
+
+        .adv h1 span {
+            border-radius: 10px;
+            padding: 5px 15px;
+            background-color: rgb(91, 89, 89);
+            color: white;
+            font-weight: 400;
+        }
+
+        @keyframes advAnivation {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-100% - 40px));
+            }
+        }
+
+        .adv:hover h1 {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box-1 zoom">
+            <div class="div div-1">
+                <div class="img-div">
+                    <img src="./Media/pexels-sebastian-voortman-189349.jpg" alt="" srcset="">
+                </div>
+                <h1>The Sea!!</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur <span>adipisicing</span> elit. Eligendi, unde.</p>
+            </div>
+            <div class="div div-2">
+                <h1>The Hindu!!</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur <span>adipisicing</span> elit. Optio incidunt reiciendis
+                    aperiam est rem
+                    recusandae sit temporibus sapiente, consequuntur repellendus nisi, saepe commodi quia aspernatur
+                    ipsum laborum necessitatibus repudiandae labore!</p>
+            </div>
+            <div class="div div-3">
+                <div class="img-div">
+                    <img src="./Media/pexels-tetyana-kovyrina-937980.jpg" alt="" srcset="">
+                </div>
+                <h1>The Smoke!!</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur <span>adipisicing</span> elit. Eligendi, unde.</p>
+            </div>
+        </div>
+        <div class="box-2 oval">
+            <div class="left">
+                <p>Lorem ipsum dolor sit amet consectetur, <span>adipisicing</span> elit. Accusamus animi quod eveniet!
+                    Consequuntur
+                    alias numquam fuga delectus quas earum necessitatibus rem eius dignissimos quos voluptas, provident
+                    blanditiis inventore sit vero explicabo ipsum sequi natus eaque laborum cupiditate vitae similique
+                    repudiandae voluptates. Perferendis placeat blanditiis ut? Ab laboriosam magni eveniet doloribus.
+                </p>
+            </div>
+            <div class="right">
+                <div class="anda">
+                    <img src="./Media/rightArrow.jpg" alt="" srcset="">
+                    <h1>Hi Animation</h1>
+                </div>
+            </div>
+        </div>
+        <div class="box-3 adv">
+            <h1>Lorem ipsum dolor sit, amet consectetur <span>adipisicing</span> elit. </h1>
+            <h1>Lorem ipsum dolor sit, amet consectetur <span>adipisicing</span> elit. </h1>
+            <h1>Lorem ipsum dolor sit, amet consectetur <span>adipisicing</span> elit. </h1>
+            <h1>Lorem ipsum dolor sit, amet consectetur <span>adipisicing</span> elit. </h1>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./script.js"></script>
+
+</html>
