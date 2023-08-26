@@ -14,12 +14,13 @@
         }
 
         .main {
-            min-height:50vh;
+            min-height: 50vh;
             overflow-x: hidden;
             position: relative;
             background-color: rgb(202, 202, 202);
         }
-        .main::-webkit-scrollbar{
+
+        .main::-webkit-scrollbar {
             display: none;
         }
 
@@ -164,6 +165,31 @@
             animation-play-state: paused;
         }
     </style>
+    <style>
+        h1 {
+            font-size: 50px;
+        }
+
+        #typewriter {
+            color: #0072ef;
+            font-weight: bold;
+        }
+
+        #cursor {
+            color: #0072ef;
+            animation: blink 1s linear infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 100%;
+            }
+
+            50% {
+                opacity: 0%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -212,6 +238,11 @@
             <h1>Lorem ipsum dolor sit, amet consectetur <span>adipisicing</span> elit. </h1>
             <h1>Lorem ipsum dolor sit, amet consectetur <span>adipisicing</span> elit. </h1>
             <h1>Lorem ipsum dolor sit, amet consectetur <span>adipisicing</span> elit. </h1>
+        </div>
+        <div class="box-4 typewritter">
+            <h1>
+                Hey, I'm Nikhar 👋<br />I am <span id="typewriter"></span><span id="cursor">|</span>
+            </h1>
         </div>
     </div>
 </body>
